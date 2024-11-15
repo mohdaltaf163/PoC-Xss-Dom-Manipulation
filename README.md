@@ -11,6 +11,8 @@ JavaScript (sensitiveDisplay.js): Handles user input and directly injects it int
 ## Purpose
 To illustrate a basic XSS scenario in LWC by allowing unencoded user input to be injected into the DOM, which could render HTML content directly if input is not sanitized. The primary objective of this PoC is to simulate how unescaped input can lead to security vulnerabilities.
 
+![dom](https://github.com/user-attachments/assets/a72603b3-ae58-49bc-846c-c11d7754a00a)
+
 ## Vulnerable Code
 In the JavaScript file (sensitiveDisplay.js), the displayUserInput method injects user input directly into a div element using innerHTML, without encoding or sanitizing the input. This demonstrates how untrusted data can manipulate the DOM, which could be exploited in various ways, such as displaying unwanted images or manipulating the DOM structure.
 
