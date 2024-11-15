@@ -1,0 +1,19 @@
+<!-- force-app/main/default/lwc/sensitiveDisplay/sensitiveDisplay.html
+<template>
+        <lightning-card title="PoC: Xss from LWC component">
+    <div class="display"></div>
+</lightning-card>
+</template>
+ -->
+
+<!-- force-app/main/default/lwc/sensitiveDisplay/sensitiveDisplay.html -->
+<template>
+    <lightning-card title="PoC: Xss LWC dom-manual">
+    <div>
+        <lightning-input type="text" label="User Input" onchange={handleInputChange}></lightning-input>
+        <lightning-button label="Display" onclick={displayUserInput}></lightning-button>
+    </div>
+    <h2>Render Output:</h2>
+    <div class="display" lwc:dom="manual"></div>
+</lightning-card>
+</template>
